@@ -38,6 +38,15 @@ public class CreateBookCommand {
 		} else {
 			System.out.println("ERROR:Failed to create book");
 		}
+		Book book1 = new Book();
+		book1.setAuthor("phanindra");
+		book1.setTitle("structures");
+		book1.setISBN("908");
+		if (create.execute(book)) {
+			System.out.println("SUCCESS:Book Created");
+		} else {
+			System.out.println("ERROR:Failed to create book");
+		}
 
 	}
 }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ ANSWER 1
+</head>
+<body>
+
+<p>
+We run the upload_file, we choose the file to be uploaded and then submit it.
+When we click the submit button the following steps takes place internally <br>
+1) fileDetail.getFileName(); <br>
+       getFileName() is a function used to return the name of file we are trying to upload. <br>
+       we also create a stream to the file. <br>
+2) String uploadedFileLocation = "/temp/" + fileDetail.getFileName();<br>
+      the filename will be appended to the string "/temp/" which is nothing but we are specifying the path.
+     then after appended, we are storing that path in a string type called uploadedFileLocation.
+3)writeToFile(uploadedInputStream, uploadedFileLocation); <br>
+    We are calling this function and passing the file location and file content to this function. <br>
+    uploadedInputStream contains the content of the file we are uploading. <br>
+4) Inside this function, a new file will be created with the filename we are passing as an argument. 
+    As we also passed the inputStream as an input, we pass the content from the Stream to the new file we are creating. <br>
+    Once we complete copying the content we flush the stream and close the file.Then we return to the calling function. <br>
+5) Then we will display this message <br>
+              "File uploaded to : " + uploadedFileLocation; <br>
+              uploadedFileLocation contains the location of the file.
+                            
+</p>
+
+<head>
+ANSWER2
+</head>
+<p>
+
+ If there are two get methods with the same @path annotation and same mime type then we will get an error message that is "duplicate method" 
+  then we cant run the application since we have an error in the code.
+
+</p>
+
+
+<head>
+ANSWER3
+</head>
+
+<p>
+
+After modifying the BooksConnectionProvider class to use properties file, my application is running correctly.
+ I created a new object and then by using rest service I can see that object attributes. M appication is running sucessfully.
+
+</body>
+</html>
