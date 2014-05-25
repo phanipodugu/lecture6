@@ -24,8 +24,6 @@ public class BooksConnectionProvider {
 
 			MongoClient mongo = new MongoClient(mongoUrl,Integer.parseInt(mongoDbPort));
 
-			//MongoClient mongo = new MongoClient("oceanic.mongohq.com", 10068);
-
 			DB db = mongo.getDB("luckypants");
 			if (db == null) {
 				System.out.println("Could not connect to Database");
